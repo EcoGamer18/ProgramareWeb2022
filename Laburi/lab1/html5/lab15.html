@@ -81,7 +81,7 @@
         </li>
     </ul>
 
-    <form action="">
+    <form method='POST' action='?'>
         <fieldset>
             <legend>Suntem in orasul tau?</legend>
             <input type="radio" name="verificareOras" value="Da"> Da
@@ -95,183 +95,199 @@
         </fieldset>
     </form>
 
-    <table>
-        <tr>
-            <th colspan="8">Fișă constatare</th>
-        </tr>
-        <tr>
-            <td>
-                <table>
-                    <tr>
-                        <td>Nume</td>
-                        <td colspan="4"><input size="30" type="text" name="nume"></td>
-                        <td>Prenume</td>
-                        <td colspan="4"><input size="40" type="text" name="prenume"></td>
-                    </tr>
-                    <tr>
-                        <td>Data constatare</td>
-                        <td colspan="1"><input type="text" name="data"></td>
-                        <td colspan="2">Adresa</td>
-                        <td colspan="7"><input size="70" type="text" name="adresa"></td>
-                    </tr>
-                    <tr>
-                        <td>Oras</td>
-                        <td colspan="3"><input type="text" name="oras"></td>
-                        <td>Judet</td>
-                        <td colspan="1"><input type="text" name="judet"></td>
-                        <td>Cod Postal</td>
-                        <td colspan="1"><input type="text" name="codPostal"></td>
-                    </tr>
-                    <tr>
-                        <td>E-mail</td>
-                        <td colspan="5"><input size="60" type="text" name="eMail"></td>
-                        <td>Sex</td>
-                        <td colspan="2">
-                            <input type="radio" name="sex">F
-                            <input type="radio" name="sex">M
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Telefon Fix</td>
-                        <td colspan="4"><input type="text" name="telefonFix"></td>
-                        <td>Telefon Mobil</td>
-                        <td colspan="4"><input type="text" name="telefonMobil"></td>
-                    </tr>
-                    <tr>
-                        <td>Numar de inmatriculare</td>
-                        <td colspan="7"><input size="70" type="text" name="adresa"></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <th colspan="8">Piese Schimbate</th>
-        </tr>
-        <tr>
-            <td>
-                <table>
-                    <tr>
-                        <td rowspan="4">
-                            Piese
-                        </td>
-                        <td>
-                            Nr. crt.
-                        </td>
-                        <td>
-                            Cod
-                        </td>
-                        <td>
-                            Nume Piesa
-                        </td>
-                        <td>
-                            Model
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td><input size="30" type="text" name="cod1"></td>
-                        <td><input size="30" type="text" name="numePiesa1"></td>
-                        <td><input size="30" type="text" name="model1"></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            2
-                        </td>
-                        <td><input size="30" type="text" name="cod2"></td>
-                        <td><input size="30" type="text" name="numePiesa2"></td>
-                        <td><input size="30" type="text" name="model2"></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            3
-                        </td>
-                        <td><input size="30" type="text" name="cod3"></td>
-                        <td><input size="30" type="text" name="numePiesa3"></td>
-                        <td><input size="30" type="text" name="model3"></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Probleme initiale
-                        </td>
-                        <td colspan="4">
-                            <textarea name="problemeInitiale" rows="4" cols="40"
-                                readonly>Tot motoru era stricat &#128525;</textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Starea finala
-                        </td>
-                        <td colspan="4">
-                            <select name="stareFinala" size="3" multiple>
-                                <option>Buna</option>
-                                <option>Rea</option>
-                                <option>Reparatie nefinalizata</option>
-                                <option>Alta</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Comentarii stare finala
-                        </td>
-                        <td colspan="4">
-                            <textarea name="comentariiStareFinala" rows="4" cols="40"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Alte observatii
-                        </td>
-                        <td colspan="4">
-                            <textarea name="alteObservatii" rows="4" cols="40"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">
-                            Autovehicul special
-                        </td>
-                        <td valign="top">
-                            Taxi
-                        </td>
-                        <td>
-                            <input type="checkbox" id="daTaxi" name="taxi" value="Da">
-                            <label for="daTaxi"> Da</label><br>
-                            <input type="checkbox" id="nuTaxi" name="taxi" value="Nu">
-                            <label for="nuTaxi"> Nu</label><br>
-                        </td>
-                        <td valign="top">
-                            Scoala de Soferi
-                        </td>
-                        <td>
-                            <input type="checkbox" id="daScoala" name="scoala" value="Da">
-                            <label for="daScoala"> Da</label><br>
-                            <input type="checkbox" id="nuScoala" name="scoala" value="Nu">
-                            <label for="nuScoala"> Nu</label><br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            Autovehiculul are instalatie gaz
-                        </td>
-                        <td>
-                            <input type="checkbox" id="daGaz" name="gaz" value="Da">
-                            <label for="daGaz"> Da</label><br>
-                            <input type="checkbox" id="nuGaz" name="gaz" value="Nu">
-                            <label for="nuGaz"> Nu</label><br>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <th colspan="8">
-                Incarca fisa -> <input type="submit" value="Salveaza">
-            </th>
-        </tr>
-    </table>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th colspan="12">Fișă constatare</th>
+                        </tr>
+                        <tr>
+                            <td>Nume</td>
+                            <td colspan="5"><input size="30" type="text" name="nume"></td>
+                            <td>Prenume</td>
+                            <td colspan="5"><input size="40" type="text" name="prenume"></td>
+                        </tr>
+                        <tr>
+                            <td>Data constatare</td>
+                            <td colspan="3"><input type="text" name="data"></td>
+                            <td colspan="1">Adresa</td>
+                            <td colspan="7"><input size="70" type="text" name="adresa"></td>
+                        </tr>
+                        <tr>
+                            <td>Oras</td>
+                            <td colspan="3"><input type="text" name="oras"></td>
+                            <td>Judet</td>
+                            <td colspan="3"><input type="text" name="judet"></td>
+                            <td>Cod Postal</td>
+                            <td colspan="3"><input type="text" name="codPostal"></td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td colspan="5"><input size="60" type="text" name="eMail"></td>
+                            <td>Sex</td>
+                            <td colspan="5">
+                                <input type="radio" name="sex">F
+                                <input type="radio" name="sex">M
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Telefon Fix</td>
+                            <td colspan="5"><input type="text" name="telefonFix"></td>
+                            <td>Telefon Mobil</td>
+                            <td colspan="5"><input type="text" name="telefonMobil"></td>
+                        </tr>
+                        <tr>
+                            <td>Numar de inmatriculare</td>
+                            <td colspan="11"><input size="70" type="text" name="adresa"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <th colspan="5">Piese Schimbate</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">
+                                Piese
+                            </td>
+                            <td>
+                                Nr. crt.
+                            </td>
+                            <td>
+                                Cod
+                            </td>
+                            <td>
+                                Nume Piesa
+                            </td>
+                            <td>
+                                Model
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td><input size="30" type="text" name="cod1"></td>
+                            <td><input size="30" type="text" name="numePiesa1"></td>
+                            <td><input size="30" type="text" name="model1"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td><input size="30" type="text" name="cod2"></td>
+                            <td><input size="30" type="text" name="numePiesa2"></td>
+                            <td><input size="30" type="text" name="model2"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3
+                            </td>
+                            <td><input size="30" type="text" name="cod3"></td>
+                            <td><input size="30" type="text" name="numePiesa3"></td>
+                            <td><input size="30" type="text" name="model3"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Probleme initiale
+                            </td>
+                            <td colspan="4">
+                                <textarea name="problemeInitiale" rows="4" cols="40"
+                                    readonly>Tot motoru era stricat &#128525;</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Starea finala
+                            </td>
+                            <td colspan="4">
+                                <select name="stareFinala" size="3" multiple>
+                                    <option>Buna</option>
+                                    <option>Rea</option>
+                                    <option>Reparatie nefinalizata</option>
+                                    <option>Alta</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Comentarii stare finala
+                            </td>
+                            <td colspan="4">
+                                <textarea name="comentariiStareFinala" rows="4" cols="40"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Alte observatii
+                            </td>
+                            <td colspan="4">
+                                <textarea name="alteObservatii" rows="4" cols="40"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">
+                                Autovehicul special
+                            </td>
+                            <td>
+                                Taxi
+                            </td>
+                            <td>
+                                <input type="checkbox" id="daTaxi" name="taxi" value="Da">
+                                <label for="daTaxi"> Da</label><br>
+                                <input type="checkbox" id="nuTaxi" name="taxi" value="Nu">
+                                <label for="nuTaxi"> Nu</label><br>
+                            </td>
+                            <td>
+                                Scoala de Soferi
+                            </td>
+                            <td>
+                                <input type="checkbox" id="daScoala" name="scoala" value="Da">
+                                <label for="daScoala"> Da</label><br>
+                                <input type="checkbox" id="nuScoala" name="scoala" value="Nu">
+                                <label for="nuScoala"> Nu</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Autovehiculul are instalatie gaz
+                            </td>
+                            <td colspan="3">
+                                <input type="checkbox" id="daGaz" name="gaz" value="Da">
+                                <label for="daGaz"> Da</label><br>
+                                <input type="checkbox" id="nuGaz" name="gaz" value="Nu">
+                                <label for="nuGaz"> Nu</label><br>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Incarca fisa -> <input type="submit" value="Salveaza">
+                </th>
+            </tr>
+        </table>
+    </div>
     <br>
     <strong>
         <a href="https://giphy.com/gifs/4N98IVxHA9dGaT42FS" target="_blank"> Angajatii nostrii lucrand din greu sa va
