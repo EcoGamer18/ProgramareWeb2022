@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <!-- https://www.cs.ubbcluj.ro/~bufny/programare-web/laborator-html/ -->
-<html>
+<html lang="ro">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
     Service Auto Albina
 </title>
 
 <body>
-    <center>
-        <h1>
-            Service Auto Albina
-        </h1>
-        <h2>
-            Service Auto Albina
-        </h2>
-        <h3>
-            Service Auto Albina
-        </h3>
-    </center>
-    <div align="center">
+    <h1>
+        Service Auto Albina
+    </h1>
+    <h2>
+        Service Auto Albina
+    </h2>
+    <h3>
+        Service Auto Albina
+    </h3>
+    <div>
         <span>
-            <img src="../albina.jpg" alt="albinuta-cute" height="100px" width="100px">
+            <img src="../albina.jpg" alt="albinuta-cute" height="100" width="100">
         </span>
         <span>
-            <img src="../albina.jpg" alt="albinuta-cute" height="100px" width="100px">
+            <img src="../albina.jpg" alt="albinuta-cute" height="100" width="100">
         </span>
         <span>
-            <img src="../albina.jpg" alt="albinuta-cute" height="100px" width="100px">
+            <img src="../albina.jpg" alt="albinuta-cute" height="100" width="100">
         </span>
     </div>
 
-    <div align="right">
+    <div>
         <p>
             Locul de unde masina ta va pleca zumzăind.
             <br>
@@ -54,7 +52,7 @@
         <li>
             Suceava
             <p>Cartiere</p>
-            <ol type="lower-roman">
+            <ol>
                 <li>
                     Burdujeni
                 </li>
@@ -97,13 +95,13 @@
         </fieldset>
     </form>
 
-    <table border="4">
+    <table>
         <tr>
-            <th colspan="8" bgcolor="yellow">Fișă constatare</th>
+            <th colspan="8">Fișă constatare</th>
         </tr>
         <tr>
             <td>
-                <table border="2" align="center">
+                <table>
                     <tr>
                         <td>Nume</td>
                         <td colspan="4"><input size="30" type="text" name="nume"></td>
@@ -147,11 +145,11 @@
             </td>
         </tr>
         <tr>
-            <th colspan="8" bgcolor="blue">Piese Schimbate</th>
+            <th colspan="8">Piese Schimbate</th>
         </tr>
         <tr>
             <td>
-                <table border="2" align="center">
+                <table>
                     <tr>
                         <td rowspan="4">
                             Piese
@@ -197,7 +195,7 @@
                         <td>
                             Probleme initiale
                         </td>
-                        <td colspan="4" align="center">
+                        <td colspan="4">
                             <textarea name="problemeInitiale" rows="4" cols="40"
                                 readonly>Tot motoru era stricat &#128525;</textarea>
                         </td>
@@ -206,7 +204,7 @@
                         <td>
                             Starea finala
                         </td>
-                        <td colspan="4" align="center">
+                        <td colspan="4">
                             <select name="stareFinala" size="3" multiple>
                                 <option>Buna</option>
                                 <option>Rea</option>
@@ -219,7 +217,7 @@
                         <td>
                             Comentarii stare finala
                         </td>
-                        <td colspan="4" align="center">
+                        <td colspan="4">
                             <textarea name="comentariiStareFinala" rows="4" cols="40"></textarea>
                         </td>
                     </tr>
@@ -227,7 +225,7 @@
                         <td>
                             Alte observatii
                         </td>
-                        <td colspan="4" align="center">
+                        <td colspan="4">
                             <textarea name="alteObservatii" rows="4" cols="40"></textarea>
                         </td>
                     </tr>
@@ -238,7 +236,7 @@
                         <td valign="top">
                             Taxi
                         </td>
-                        <td align="center">
+                        <td>
                             <input type="checkbox" id="daTaxi" name="taxi" value="Da">
                             <label for="daTaxi"> Da</label><br>
                             <input type="checkbox" id="nuTaxi" name="taxi" value="Nu">
@@ -247,7 +245,7 @@
                         <td valign="top">
                             Scoala de Soferi
                         </td>
-                        <td align="center">
+                        <td>
                             <input type="checkbox" id="daScoala" name="scoala" value="Da">
                             <label for="daScoala"> Da</label><br>
                             <input type="checkbox" id="nuScoala" name="scoala" value="Nu">
@@ -258,7 +256,7 @@
                         <td valign="top">
                             Autovehiculul are instalatie gaz
                         </td>
-                        <td align="center">
+                        <td>
                             <input type="checkbox" id="daGaz" name="gaz" value="Da">
                             <label for="daGaz"> Da</label><br>
                             <input type="checkbox" id="nuGaz" name="gaz" value="Nu">
@@ -269,7 +267,7 @@
             </td>
         </tr>
         <tr>
-            <th colspan="8" align="right">
+            <th colspan="8">
                 Incarca fisa -> <input type="submit" value="Salveaza">
             </th>
         </tr>
