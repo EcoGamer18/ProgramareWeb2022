@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!-- https://www.cs.ubbcluj.ro/~bufny/programare-web/laborator-html/ -->
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+    Service Auto Albina
+</title>
+
+<body>
+    <center>
+        <h1>
+            Service Auto Albina
+        </h1>
+        <h2>
+            Service Auto Albina
+        </h2>
+        <h3>
+            Service Auto Albina
+        </h3>
+    </center>
+    <div align="center">
+        <span>
+            <img src="../albina.jpg" alt="albinuta-cute" height="100px" width="100px">
+        </span>
+        <span>
+            <img src="../albina.jpg" alt="albinuta-cute" height="100px" width="100px">
+        </span>
+        <span>
+            <img src="../albina.jpg" alt="albinuta-cute" height="100px" width="100px">
+        </span>
+    </div>
+
+    <div align="right">
+        <p>
+            Locul de unde masina ta va pleca zumzăind.
+            <br>
+            Suntem aici pentru tine atunci cand ai nevoie. Venim cu stupul la tine.
+        </p>
+    </div>
+
+    <b>
+        Orase in care avem sedii:
+    </b>
+    <ul>
+        <li>
+            Oradea
+        </li>
+        <li>
+            Cluj-Napoca
+        </li>
+        <li>
+            Iasi
+        </li>
+        <li>
+            Suceava
+            <p>Cartiere</p>
+            <ol type="lower-roman">
+                <li>
+                    Burdujeni
+                </li>
+                <li>
+                    Itcani
+                </li>
+                <li>
+                    Obcini
+                </li>
+            </ol>
+            <p>Orase</p>
+            <ol start="2" type="a">
+                <li>
+                    Radauti
+                </li>
+                <li>
+                    Campulung Moldovenesc
+                </li>
+                <li>
+                    Vatra Dornei
+                </li>
+                <li>
+                    Gura Humorului
+                </li>
+            </ol>
+        </li>
+    </ul>
+
+    <form action="">
+        <fieldset>
+            <legend>Suntem in orasul tau?</legend>
+            <input type="radio" name="verificareOras" value="Da"> Da
+            <input type="radio" name="verificareOras" value="Nu"> Nu
+        </fieldset>
+        <fieldset>
+            <legend>Daca nu, spune-ne in ce oras esti, ca sa venim si la tine.</legend>
+            <input type="text" name="raspunsNuOras">
+            <br>
+            <input type="submit" name="submitRaspunsOras" value="Submit">
+        </fieldset>
+    </form>
+
+    <table border="4">
+        <tr>
+            <th colspan="8" bgcolor="yellow">Fișă constatare</th>
+        </tr>
+        <tr>
+            <td>
+                <table border="2" align="center">
+                    <tr>
+                        <td>Nume</td>
+                        <td colspan="4"><input size="30" type="text" name="nume"></td>
+                        <td>Prenume</td>
+                        <td colspan="4"><input size="40" type="text" name="prenume"></td>
+                    </tr>
+                    <tr>
+                        <td>Data constatare</td>
+                        <td colspan="1"><input type="text" name="data"></td>
+                        <td colspan="2">Adresa</td>
+                        <td colspan="7"><input size="70" type="text" name="adresa"></td>
+                    </tr>
+                    <tr>
+                        <td>Oras</td>
+                        <td colspan="3"><input type="text" name="oras"></td>
+                        <td>Judet</td>
+                        <td colspan="1"><input type="text" name="judet"></td>
+                        <td>Cod Postal</td>
+                        <td colspan="1"><input type="text" name="codPostal"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td colspan="5"><input size="60" type="text" name="eMail"></td>
+                        <td>Sex</td>
+                        <td colspan="2">
+                            <input type="radio" name="sex">F
+                            <input type="radio" name="sex">M
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Telefon Fix</td>
+                        <td colspan="4"><input type="text" name="telefonFix"></td>
+                        <td>Telefon Mobil</td>
+                        <td colspan="4"><input type="text" name="telefonMobil"></td>
+                    </tr>
+                    <tr>
+                        <td>Numar de inmatriculare</td>
+                        <td colspan="7"><input size="70" type="text" name="adresa"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="8" bgcolor="blue">Piese Schimbate</th>
+        </tr>
+        <tr>
+            <td>
+                <table border="2" align="center">
+                    <tr>
+                        <td rowspan="4">
+                            Piese
+                        </td>
+                        <td>
+                            Nr. crt.
+                        </td>
+                        <td>
+                            Cod
+                        </td>
+                        <td>
+                            Nume Piesa
+                        </td>
+                        <td>
+                            Model
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td><input size="30" type="text" name="cod1"></td>
+                        <td><input size="30" type="text" name="numePiesa1"></td>
+                        <td><input size="30" type="text" name="model1"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td><input size="30" type="text" name="cod2"></td>
+                        <td><input size="30" type="text" name="numePiesa2"></td>
+                        <td><input size="30" type="text" name="model2"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td><input size="30" type="text" name="cod3"></td>
+                        <td><input size="30" type="text" name="numePiesa3"></td>
+                        <td><input size="30" type="text" name="model3"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Probleme initiale
+                        </td>
+                        <td colspan="4" align="center">
+                            <textarea name="problemeInitiale" rows="4" cols="40"
+                                readonly>Tot motoru era stricat &#128525;</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Starea finala
+                        </td>
+                        <td colspan="4" align="center">
+                            <select name="stareFinala" size="3" multiple>
+                                <option>Buna</option>
+                                <option>Rea</option>
+                                <option>Reparatie nefinalizata</option>
+                                <option>Alta</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Comentarii stare finala
+                        </td>
+                        <td colspan="4" align="center">
+                            <textarea name="comentariiStareFinala" rows="4" cols="40"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Alte observatii
+                        </td>
+                        <td colspan="4" align="center">
+                            <textarea name="alteObservatii" rows="4" cols="40"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            Autovehicul special
+                        </td>
+                        <td valign="top">
+                            Taxi
+                        </td>
+                        <td align="center">
+                            <input type="checkbox" id="daTaxi" name="taxi" value="Da">
+                            <label for="daTaxi"> Da</label><br>
+                            <input type="checkbox" id="nuTaxi" name="taxi" value="Nu">
+                            <label for="nuTaxi"> Nu</label><br>
+                        </td>
+                        <td valign="top">
+                            Scoala de Soferi
+                        </td>
+                        <td align="center">
+                            <input type="checkbox" id="daScoala" name="scoala" value="Da">
+                            <label for="daScoala"> Da</label><br>
+                            <input type="checkbox" id="nuScoala" name="scoala" value="Nu">
+                            <label for="nuScoala"> Nu</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            Autovehiculul are instalatie gaz
+                        </td>
+                        <td align="center">
+                            <input type="checkbox" id="daGaz" name="gaz" value="Da">
+                            <label for="daGaz"> Da</label><br>
+                            <input type="checkbox" id="nuGaz" name="gaz" value="Nu">
+                            <label for="nuGaz"> Nu</label><br>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="8" align="right">
+                Incarca fisa -> <input type="submit" value="Salveaza">
+            </th>
+        </tr>
+    </table>
+    <br>
+    <strong>
+        <a href="https://giphy.com/gifs/4N98IVxHA9dGaT42FS" target="_blank"> Angajatii nostrii lucrand din greu sa va
+            repare masina. </a>
+    </strong>
+    <h3>
+        Top 3 meme uri(dupa voturile angajatilor):
+    </h3>
+    <ol>
+        <li>
+            <a href="https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png"
+                target="_blank">Locul 3</a>
+        </li>
+        <li>
+            <a href="https://i.pinimg.com/736x/ac/b7/f9/acb7f99ba0ef473e03ee81e91a6281ee.jpg" target="_blank">Locul
+                2</a>
+        </li>
+        <li>
+            <a href="https://pbs.twimg.com/media/EdXGQguXgAA6VlX.jpg" target="_blank">Locul 1</a>
+        </li>
+    </ol>
+    <p>
+        <a href="http://validator.w3.org/check?uri=referer" target="_blank"><img
+                src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31"
+                width="88"></a>
+    </p>
+</body>
+
+</html>
