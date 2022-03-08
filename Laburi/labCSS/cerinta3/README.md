@@ -15,4 +15,4 @@ Un site contine un header (rosu), un meniu orizontal sau vertical (galben), o zo
     Daca utilizatorul ingusteaza latimea ferestrei browserului pana la o latime minima, geometria site-ului se va pastra, footerul fiind “impins” in jos la nevoie, afisandu-se si un scroll bar vertical.
 
 
-![image](https://user-images.githubusercontent.com/54414302/157270727-8dee4e59-bd39-40db-b65e-38577e4e32b4.png)
+![image](https://user-images.githubusercontent.com/54414302/157270806-54bc8bd2-94be-4fb6-aa12-eedd85bdd8f0.png)
