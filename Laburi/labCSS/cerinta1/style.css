@@ -1,0 +1,21 @@
+.container{
+    display: inline-flex; 
+    align-items: center;
+    border: 1px solid black;
+}
+/*
+inline-flex:  elementele sunt una langa alta si nu umple spatiul randului
+
+align-items: aliniaza vertical(matrice) doar daca flex-direction este row
+    daca este column, aliniaza orizontal (matrice)
+*/
+
+.container > div{
+    display: flex;
+    width : 200px;
+    text-align: center;
+    justify-content: center;
+}
+/*
+justify-content: directia pe orizontal a contentului
+*/

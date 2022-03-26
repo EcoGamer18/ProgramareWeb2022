@@ -1,0 +1,7 @@
+#block_container{
+    display: flex;
+    justify-content: center;
+}
+
+#element1 {display:inline-block; width:33%; padding:10px}
+#element2 {display:inline-block; width:66%; padding:10px}

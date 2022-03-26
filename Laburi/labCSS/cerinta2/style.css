@@ -1,0 +1,40 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: red;
+  padding: 5em 0;
+}
+
+nav {
+  background-color: yellow;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 0 15px;
+}
+
+li:not(:first-child) {
+  border-left: 1px solid #000;
+}
+
+.content {
+  background-color: green;
+  padding: 10em 0;
+}
+
+footer {
+  background-color: pink;
+  padding: 4em 0;
+}

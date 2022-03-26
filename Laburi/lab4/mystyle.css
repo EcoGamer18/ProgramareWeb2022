@@ -1,0 +1,24 @@
+.primu {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding: 10px;
+    border: 5px solid black;
+    padding-left: 25px;
+    display: inline-block;
+    position:relative;
+  }
+.aldoilea{
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding: 10px;
+    border: 5px solid black;
+    padding-left: 25px;
+    position:relative;
+    display: block;
+    overflow: auto;
+}
+

@@ -1,0 +1,46 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: red;
+  padding: 5em 0;
+}
+
+.container {
+  display: flex;
+}
+
+nav {
+  width: 10%;
+  background-color: yellow;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  border-bottom: 1px solid #000;
+}
+
+li.divider {
+  display: none;
+}
+
+.content {
+  background-color: green;
+  width: 90%;
+  padding: 10em 0;
+}
+
+footer {
+  background-color: pink;
+  padding: 4em 0;
+}
