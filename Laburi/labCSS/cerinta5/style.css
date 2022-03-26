@@ -1,0 +1,31 @@
+.container {
+  width: 450px;
+  border: 1px solid #000;
+}
+
+.portraits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  list-style: none;
+}
+
+.portraits img {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.portraits > li {
+  padding: 25px 25px calc(25px - 18.4px); /* 18.4px este font-size-ul default de la paragraph */
+  background-color: cyan;
+}
+
+.portraits > li > p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
