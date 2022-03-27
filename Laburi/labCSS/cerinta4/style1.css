@@ -1,0 +1,110 @@
+#nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  top: 0;
+}
+
+#nav li, #nav a {
+  height: 84px;
+  display: block;
+}
+
+#facebook {
+  width: 84px;
+  background: url('icons.png') calc(0 * -84px) 84px;
+}
+
+#facebook a:hover {
+  background: url('icons.png') calc(0 * -84px) 0;
+}
+
+#flickr {
+  width: 84px;
+  background: url('icons.png') calc(1 * -84px) 84px;
+}
+
+#flickr a:hover {
+  background: url('icons.png') calc(1 * -84px) 0;
+}
+
+#dribble {
+  width: 84px;
+  background: url('icons.png') calc(2 * -84px)  84px;
+}
+
+#dribble a:hover {
+  background: url('icons.png') calc(2 * -84px) 0;
+}
+
+#g-plus {
+  width: 84px;
+  background: url('icons.png') calc(3 * -84px)  84px;
+}
+
+#g-plus a:hover {
+  background: url('icons.png') calc(3 * -84px) 0;
+}
+
+#linkedin {
+  width: 84px;
+  background: url('icons.png') calc(4 * -84px)  84px;
+}
+
+#linkedin a:hover {
+  background: url('icons.png') calc(4 * -84px) 0;
+}
+
+#pinterest {
+  width: 84px;
+  background: url('icons.png') calc(5 * -84px)  84px;
+}
+
+#pinterest a:hover {
+  background: url('icons.png') calc(5 * -84px) 0;
+}
+
+#rss-feed {
+  width: 84px;
+  background: url('icons.png') calc(6 * -84px)  84px;
+}
+
+#rss-feed a:hover {
+  background: url('icons.png') calc(6 * -84px) 0;
+}
+
+#skype {
+  width: 84px;
+  background: url('icons.png') calc(7 * -84px)  84px;
+}
+
+#skype a:hover {
+  background: url('icons.png') calc(7 * -84px) 0;
+}
+
+#twitter {
+  width: 84px;
+  background: url('icons.png') calc(8 * -84px)  84px;
+}
+
+#twitter a:hover {
+  background: url('icons.png') calc(8 * -84px) 0;
+}
+
+#vimeo {
+  width: 84px;
+  background: url('icons.png') calc(9 * -84px)  84px;
+}
+
+#vimeo a:hover {
+  background: url('icons.png') calc(9 * -84px) 0;
+}
+
+#youtube {
+  width: 84px;
+  background: url('icons.png') calc(10 * -84px)  84px;
+}
+
+#youtube a:hover {
+  background: url('icons.png') calc(10 * -84px) 0;
+}
