@@ -65,14 +65,14 @@
 
 }
 
-.bob::after{
+.alice::after{
     left: 0px;
     width: 100px;
-    background: url("aliceSiBob.png") -30px -350px;
+    background: url("aliceSiBob.png") -30px -380px;
 
 }
 
-.alice::after{
+.bob::after{
     left: 0px;
     width: 123 ;
     background: url("aliceSiBob.png") -30px -150px;
