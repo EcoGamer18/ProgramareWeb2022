@@ -15,7 +15,7 @@
 .portraits img {
   width: 120px;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .portraits > li {
@@ -24,6 +24,7 @@
 }
 
 .portraits > li > p {
+  width: 120px;
   text-align: center;
   margin: 0;
   padding: 0;
