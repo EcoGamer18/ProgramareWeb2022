@@ -1,3 +1,86 @@
+.dialog{
+
+    margin-left:70px
+
+}
+
+
+
+.dialog>li {
+
+    position:relative;
+
+    padding:15px 15px 15px 55px;
+
+    margin:1em 0 1em 0em;
+
+    border:5px solid #000000;
+
+    color:#000;
+
+    border-radius:10px;
+
+    max-width:300px;
+
+}
+
+/*I could have made it look closer to the provided image had if I had, like *1* more false element to use.*/
+
+.dialog>li:before{
+
+    content:"";
+
+    position:absolute;
+
+    display:block;
+
+    width:0;
+
+    top:10px;
+
+    bottom:auto;
+
+    left:-30px;
+
+    border-style:solid;
+
+    border-width:15px 30px 15px 0;
+
+    border-color:transparent #000000;
+
+}
+
+.dialog>li:after{
+
+    content:"";
+
+    position:absolute;
+
+    display:block;
+
+    width:50px;
+
+    height:50px;
+
+    top: 0px;
+
+    left:-80px;
+}
+
+.bob{
+    left: 0px;
+    width: 123px;
+    background: url("aliceSiBob.png") 150px 150px;
+
+}
+
+.alice{
+
+    background: url("aliceSiBob.png") -450px 0px;
+
+}
+
+
 .alice, .bob{
     width:200px; 
     height:200px; 
