@@ -1,7 +1,5 @@
 .dialog{
-
-    margin-left:70px
-
+    margin-left:123px
 }
 
 
@@ -24,7 +22,6 @@
 
 }
 
-/*I could have made it look closer to the provided image had if I had, like *1* more false element to use.*/
 
 .dialog>li:before{
 
@@ -58,31 +55,26 @@
 
     display:block;
 
-    width:50px;
+    width:70px;
 
-    height:50px;
+    height:90px;
 
     top: 0px;
 
-    left:-80px;
+    left:-100px;
+
 }
 
-.bob{
+.bob::after{
     left: 0px;
-    width: 123px;
-    background: url("aliceSiBob.png") 150px 150px;
+    width: 100px;
+    background: url("aliceSiBob.png") -30px -350px;
 
 }
 
-.alice{
+.alice::after{
+    left: 0px;
+    width: 123 ;
+    background: url("aliceSiBob.png") -30px -150px;
 
-    background: url("aliceSiBob.png") -450px 0px;
-
-}
-
-
-.alice, .bob{
-    width:200px; 
-    height:200px; 
-    background-image: url(locationoftheimage);
 }
