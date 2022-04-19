@@ -10,6 +10,7 @@ const sortColumn = (columnHeader) =>{
     }
     var indexArray = [...Array(toSort.length).keys()];
 
+    // Bubblesort ca sa tinem minte si indecsi de la row uri si astfel pastram si informatia
     let sorted = false;
     while (!sorted) {
         sorted = true;
