@@ -1,4 +1,4 @@
-const n = 3;
+const n = 2;
 var won = false;
 
 const shuffle = (array) => {
@@ -46,20 +46,12 @@ const game = (e) => {
         e = e || window.event;
       var list = document.getElementsByTagName("td");
       var pozx = 0, pozy = 0;
-      var const1 = [], const2 =[];
       for(var i = 0; i < list.length; i ++){
-        const1[i] = list[i].innerHTML;
-        const2[i] = i+1;
-
         if(list[i].innerHTML == 0 || list[i].innerHTML == ''){
           pozx = i%n;
           pozy = Math.floor(i/n);
         }
-        else{
-          const1[i] = parseInt(list[i].innerHTML);
-        }
       }
-      const2[list.length - 1] = "";
     
       if (e.keyCode == '38' && pozy > 0) {
           // up
@@ -78,8 +70,20 @@ const game = (e) => {
           [list[pozy*n+pozx].innerHTML, list[pozy*n+pozx+1].innerHTML] = [list[pozy*n+pozx+1].innerHTML, list[pozy*n+pozx].innerHTML];
       }
 
-      console.log(const1);
-      console.log(const2);
+      
+      var list = document.getElementsByTagName("td");
+      var pozx = 0, pozy = 0;
+      var const1 = [], const2 =[];
+      for(var i = 0; i < list.length; i ++){
+        const1[i] = list[i].innerHTML;
+        const2[i] = i+1;
+
+        if(list[i].innerHTML != 0 && list[i].innerHTML != ''){
+          const1[i] = parseInt(list[i].innerHTML);
+        }
+      }
+      const2[list.length - 1] = "";
+
       won = (const1.toString() == const2.toString())?true:false;
       if(won){
         const body = document.body;
