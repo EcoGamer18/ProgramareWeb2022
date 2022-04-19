@@ -22,7 +22,7 @@ const setSelectedImage = (currentElement) => {
 
 const handleGame = async (selectedImage, currentImage) => {
     if (currentImage.src === selectedImage.src) {
-        gameStatus.textContent = "You found one proful!";
+        gameStatus.textContent = "You found one floare!";
         profiFound.push(currentImage.src);
         clicked = 0;
     }
