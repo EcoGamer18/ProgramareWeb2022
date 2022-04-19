@@ -1,4 +1,4 @@
-const n = 2;
+const n = 3;
 var won = false;
 
 const shuffle = (array) => {
