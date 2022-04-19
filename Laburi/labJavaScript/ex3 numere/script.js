@@ -45,8 +45,8 @@ const handleGame = async (selectedImage, currentImage) => {
     setVisible(selectedImage, 0);
 }
 
-for (const image of document.querySelectorAll("td")) {
-    image.addEventListener("click", (e) => {
+for (const numar of document.querySelectorAll("td")) {
+    numar.addEventListener("click", (e) => {
         if (profiFound.includes(e.target.innerHTML)) {
             return;
         }
