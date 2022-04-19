@@ -1,4 +1,7 @@
-function shuffle(array) {
+const n = 3;
+var won = false;
+
+const shuffle = (array) => {
     var tmp, current, top = array.length;
     if(top) while(--top) {
       current = Math.floor(Math.random() * (top + 1));
@@ -7,56 +10,84 @@ function shuffle(array) {
       array[top] = tmp;
     }
     return array;
+}
+
+
+const initialize = () => {
+
+  var a=[];
+  for (i = 0;i < n*n; i++ ) {
+    a[i]=i;
+  }
+  a = shuffle(a);
+
+  const tabela = document.createElement('table');
+    for(i = 0; i < n ; i++){
+      const tr = tabela.insertRow();
+      for(j = 0; j < n ; j++){
+        const td = tr.insertCell();
+        switch (a[i*n+j]){
+          case 0:
+            td.appendChild(document.createTextNode(""));
+            break;
+          default:
+            td.appendChild(document.createTextNode(a[i*n+j]));
+        }
+      }
+    }
+
+    const body = document.body;
+    body.appendChild(tabela);
+  }
+  
+const game = (e) => {
+  
+    if(!won){
+        e = e || window.event;
+      var list = document.getElementsByTagName("td");
+      var pozx = 0, pozy = 0;
+      var const1 = [], const2 =[];
+      for(var i = 0; i < list.length; i ++){
+        const1[i] = list[i].innerHTML;
+        const2[i] = i+1;
+
+        if(list[i].innerHTML == 0 || list[i].innerHTML == ''){
+          pozx = i%n;
+          pozy = Math.floor(i/n);
+        }
+        else{
+          const1[i] = parseInt(list[i].innerHTML);
+        }
+      }
+      const2[list.length - 1] = "";
+    
+      if (e.keyCode == '38' && pozy > 0) {
+          // up
+          [list[pozy*n+pozx].innerHTML, list[(pozy-1)*n+pozx].innerHTML] = [list[(pozy-1)*n+pozx].innerHTML, list[pozy*n+pozx].innerHTML];
+      }
+      else if (e.keyCode == '40' && pozy < n-1) {
+          // down
+          [list[pozy*n+pozx].innerHTML, list[(pozy+1)*n+pozx].innerHTML] = [list[(pozy+1)*n+pozx].innerHTML, list[pozy*n+pozx].innerHTML];
+      }
+      else if (e.keyCode == '37' && pozx > 0) {
+          // left
+          [list[pozy*n+pozx].innerHTML, list[pozy*n+(pozx-1)].innerHTML] = [list[pozy*n+(pozx-1)].innerHTML, list[pozy*n+pozx].innerHTML];
+      }
+      else if (e.keyCode == '39' && pozx < n-1) {
+          // right
+          [list[pozy*n+pozx].innerHTML, list[pozy*n+pozx+1].innerHTML] = [list[pozy*n+pozx+1].innerHTML, list[pozy*n+pozx].innerHTML];
+      }
+
+      console.log(const1);
+      console.log(const2);
+      won = (const1.toString() == const2.toString())?true:false;
+      if(won){
+        const body = document.body;
+        const para = document.createElement('p');
+        para.innerHTML = "You won!";
+        body.appendChild(para);
+      }
+    }
   }
   
   document.onkeydown = game;
-  
-  function initialize(){
-  
-    for (var a=[],i=0;i<9;++i) a[i]=i;
-    a = shuffle(a);
-  
-    var list = document.getElementsByTagName("td");
-    for(var i = 0; i < list.length; i ++){
-      if(a[i] == 0) {
-        list[i].innerHTML = "";
-        continue;
-      }
-      list[i].innerHTML = a[i];
-    }
-  
-    console.log(list);
-  
-  }
-  
-  function game(e){
-  
-    e = e || window.event;
-    var list = document.getElementsByTagName("td");
-    var pozx = 0, pozy = 0;
-    for(var i = 0; i < list.length; i ++){
-      if(list[i].innerHTML == ""){
-        pozx = i%3;
-        pozy = Math.floor(i/3);
-      }
-    }
-  
-    if (e.keyCode == '38' && pozy > 0) {
-        // up arrow
-        [list[pozy*3+pozx].innerHTML, list[(pozy-1)*3+pozx].innerHTML] = [list[(pozy-1)*3+pozx].innerHTML, list[pozy*3+pozx].innerHTML];
-    }
-    else if (e.keyCode == '40' && pozy < 2) {
-        // down arrow
-        [list[pozy*3+pozx].innerHTML, list[(pozy+1)*3+pozx].innerHTML] = [list[(pozy+1)*3+pozx].innerHTML, list[pozy*3+pozx].innerHTML];
-    }
-    else if (e.keyCode == '37' && pozx > 0) {
-        // left arrow
-        [list[pozy*3+pozx].innerHTML, list[pozy*3+(pozx-1)].innerHTML] = [list[pozy*3+(pozx-1)].innerHTML, list[pozy*3+pozx].innerHTML];
-    }
-    else if (e.keyCode == '39' && pozx < 2) {
-        // right arrow
-        [list[pozy*3+pozx].innerHTML, list[pozy*3+pozx+1].innerHTML] = [list[pozy*3+pozx+1].innerHTML, list[pozy*3+pozx].innerHTML];
-    }
-  
-  }
-  
