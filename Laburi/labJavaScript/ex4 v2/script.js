@@ -1,5 +1,4 @@
 var clicked = 0;
-var directie="";
 
 const sortColumn = (columnHeader) =>{
     var sortCriteria = columnHeader.innerHTML;
@@ -41,7 +40,6 @@ const sortColumn = (columnHeader) =>{
             }
         }     
         clicked++;  
-        directie = " ▼";
     }   
     else{
         let sorted = false;
@@ -69,7 +67,6 @@ const sortColumn = (columnHeader) =>{
             }
         }  
         clicked--;   
-        directie = " ▲";
     }
 
     
@@ -80,10 +77,8 @@ const sortColumn = (columnHeader) =>{
             sortRow[j] = row.cells[indexArray[j - 1] + 1].innerHTML;
         }
 
-        sortRow[0] = sortRow[0] + directie;
         for (var j = 1; j < sortRow.length; j++) {
             row.cells[j].innerHTML = sortRow[j];
         }
     }
-    directie = "";
 }
