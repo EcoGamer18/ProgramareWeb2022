@@ -7,14 +7,14 @@ $(document).ready(function(){
         let toSort = new Array(table.rows[0].length);
 
         for (var i = 0, row; row = table.rows[i]; i++) {
-            if (row.cells[0].innerHTML == sortCriteria) {
+            if (row.cells[0].innerHTML == sortCriteria) { // html in loc de inner
                 toSort = [].slice.call(row.cells);
                 toSort = toSort.slice(1, toSort.length);
             }
         }
         var indexArray = [...Array(toSort.length).keys()];
 
-
+        
         // Bubblesort ca sa tinem minte si indecsi de la row uri si astfel pastram si informatia
         if(clicked == 0){
             let sorted = false;
@@ -79,7 +79,7 @@ $(document).ready(function(){
             }
 
             for (var j = 1; j < sortRow.length; j++) {
-                row.cells[j].innerHTML = sortRow[j];
+                row.cells[j].innerHTML = sortRow[j]; // innerhtml to html
             }
         }
     });

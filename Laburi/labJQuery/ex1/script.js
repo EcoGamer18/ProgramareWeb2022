@@ -1,20 +1,15 @@
 $(document).ready(function(){
 
     $("#lista1").dblclick(function(){
-
-        var obj = document.createElement("option");
-        
-        obj.text = document.getElementById('lista1').options[document.getElementById('lista1').selectedIndex].text;
-        $("#lista2").append(obj);
+        var value = $('#lista1 option:selected').text();
+        $("#lista2").append($('<option/>').text(value));
         $("#lista1 option:selected").remove();
     });
 
 
     $("#lista2").dblclick(function(){
-        var obj = document.createElement("option");
-        
-        obj.text = document.getElementById('lista2').options[document.getElementById('lista2').selectedIndex].text;
-        $("#lista1").append(obj);
+        var value = $('#lista2 option:selected').text();
+        $("#lista1").append($('<option/>').text(value));
         $("#lista2 option:selected").remove();
     });
 

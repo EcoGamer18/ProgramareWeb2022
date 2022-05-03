@@ -23,9 +23,9 @@ $(document).ready(function(){
     }
 
     const handleGame = async (selectedImage, currentImage) => {
-        if (currentImage.src === selectedImage.src) {
+        if ($(currentImage).attr('src') === $(selectedImage).attr('src')) {
             gameStatus.text("You found one floare!");
-            profiFound.push(currentImage.src);
+            profiFound.push($(currentImage).attr('src'));
             clicked = 0;
         }
         
@@ -34,7 +34,7 @@ $(document).ready(function(){
             return;
         }
 
-        if (profiFound.includes(currentImage.src)) {
+        if (profiFound.includes($(currentImage).attr('src'))) {
             return;
         }
 
@@ -49,7 +49,7 @@ $(document).ready(function(){
 
     for (const image of $(document).find("img")) {
         image.addEventListener("click", (e) => {
-            if (profiFound.includes(e.target.src)) {
+            if (profiFound.includes($(e.target).attr('src'))) {
                 return;
             }
             

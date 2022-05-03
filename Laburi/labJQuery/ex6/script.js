@@ -17,7 +17,7 @@ $(document).ready(function(){
     
     if(!won){
         e = e || window.event;
-      var list = document.getElementsByTagName("td");
+      var list = $("td");
       var pozx = 0, pozy = 0;
       for(var i = 0; i < list.length; i ++){
         if(list[i].innerHTML == 0 || list[i].innerHTML == ''){
@@ -44,7 +44,7 @@ $(document).ready(function(){
       }
 
       
-      var list = document.getElementsByTagName("td");
+      var list = document.getElementsByTagName("td"); // jquery
       var pozx = 0, pozy = 0;
       var const1 = [], const2 =[];
       for(var i = 0; i < list.length; i ++){
