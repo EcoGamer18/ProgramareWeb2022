@@ -1,87 +1,104 @@
 $(document).ready(function(){
-    var clicked = 0;
+    var clicked = new Array();
+    var count = 0;
+    $("table tr th").each(function(i, v){
+        count++;
+    })
+
+    var clicked = new Array(count).fill(0);
 
     $("th").click(function(){
-        var sortCriteria = $(this).text();
-        var table = $(this).parent().parent().get(0);
-        let toSort = new Array(table.rows[0].length);
+        var header = Array();
 
-        for (var i = 0, row; row = table.rows[i]; i++) {
-            if (row.cells[0].innerHTML == sortCriteria) { // html in loc de inner
-                toSort = [].slice.call(row.cells);
-                toSort = toSort.slice(1, toSort.length);
+        var id = $(this).text();
+
+        var criteria = -1;
+
+        $("table tr th").each(function(i, v){
+            header[i] = $(this).text();
+        })
+
+        for(let i = 0 ; i < header.length ;i++){
+            if(id.localeCompare(header[i]) == 0){
+                criteria = i;
+                break;
             }
         }
-        var indexArray = [...Array(toSort.length).keys()];
 
+        var data = Array();
+
+        $("table tr").each(function(i, v){
+            data[i] = Array();
+            $(this).children('td').each(function(ii, vv){
+                data[i][ii] = $(this).text();
+            }); 
+        })
         
-        // Bubblesort ca sa tinem minte si indecsi de la row uri si astfel pastram si informatia
-        if(clicked == 0){
+        console.log(id,clicked[criteria]);
+        if(clicked[criteria] == 0){
             let sorted = false;
             while (!sorted) {
                 sorted = true;
-                for (let i = 0; i < toSort.length; i++) {
-                    let el1 = toSort[i].innerHTML;
-                    for (let j = i + 1; j < toSort.length; j++) {
-                        let el2 = toSort[j].innerHTML;
+                for (let i = 0; i < data[criteria].length; i++) {
+                    let el1 = data[criteria][i];
+                    for (let j = i + 1; j < data[criteria].length; j++) {
+                        let el2 = data[criteria][j];
                         if (!isNaN(el1)) {
                             if (parseInt(el1) > parseInt(el2)) {
-                                [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
-                                [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
+                                for(let k = 0;k < data.length; k++){
+                                    [data[k][i], data[k][j]] = [data[k][j], data[k][i]];
+                                }
                                 sorted = false;
                             }
                         }
                         else {
                             if (el1 > el2) {
-                                [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
-                                [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
+                                for(let k = 0;k < data.length; k++){
+                                    [data[k][i], data[k][j]] = [data[k][j], data[k][i]];
+                                }
                                 sorted = false;
                             }
                         }
                     }
                 }
             }     
-            clicked++;  
+            clicked[criteria]++;  
         }   
         else{
             let sorted = false;
             while (!sorted) {
                 sorted = true;
-                for (let i = 0; i < toSort.length; i++) {
-                    let el1 = toSort[i].innerHTML;
-                    for (let j = i + 1; j < toSort.length; j++) {
-                        let el2 = toSort[j].innerHTML;
+                for (let i = 0; i < data[criteria].length; i++) {
+                    let el1 = data[criteria][i];
+                    for (let j = i + 1; j < data[criteria].length; j++) {
+                        let el2 = data[criteria][j];
                         if (!isNaN(el1)) {
                             if (parseInt(el1) < parseInt(el2)) {
-                                [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
-                                [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
+                                for(let k = 0;k < data.length; k++){
+                                    [data[k][i], data[k][j]] = [data[k][j], data[k][i]];
+                                }
                                 sorted = false;
                             }
                         }
                         else {
                             if (el1 < el2) {
-                                [toSort[i], toSort[j]] = [toSort[j], toSort[i]];
-                                [indexArray[i], indexArray[j]] = [indexArray[j], indexArray[i]];
+                                for(let k = 0;k < data.length; k++){
+                                    [data[k][i], data[k][j]] = [data[k][j], data[k][i]];
+                                }
                                 sorted = false;
                             }
                         }
                     }
                 }
-            }  
-            clicked--;   
+            }        
+            clicked[criteria]--;   
         }
 
-        
-        for (var i = 0, row; row = table.rows[i]; i++) {
-            let sortRow = new Array(row.cells.length);
-            for (var j = 1; j < row.cells.length; j++) {
-                sortRow[j] = row.cells[indexArray[j - 1] + 1].innerHTML;
-            }
-
-            for (var j = 1; j < sortRow.length; j++) {
-                row.cells[j].innerHTML = sortRow[j]; // innerhtml to html
-            }
-        }
+        $("table tr").each(function(i, v){
+            $(this).children('td').each(function(ii, vv){
+                $(this).text(data[i][ii]);
+            }); 
+        })
     });
 
 });

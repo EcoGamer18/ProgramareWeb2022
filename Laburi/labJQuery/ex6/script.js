@@ -43,21 +43,16 @@ $(document).ready(function(){
           [list[pozy*n+pozx].innerHTML, list[pozy*n+pozx+1].innerHTML] = [list[pozy*n+pozx+1].innerHTML, list[pozy*n+pozx].innerHTML];
       }
 
-      
-      var list = document.getElementsByTagName("td"); // jquery
-      var pozx = 0, pozy = 0;
-      var const1 = [], const2 =[];
-      for(var i = 0; i < list.length; i ++){
-        const1[i] = list[i].innerHTML;
-        const2[i] = i+1;
+      var count = 0;
+      $("table tr").each(function(i, v){
+        $(this).children('td').each(function(ii, vv){
+            if(i*n + ii + 1 == $(this).text()){
+              count++;
+            }
+        }); 
+      })
 
-        if(list[i].innerHTML != 0 && list[i].innerHTML != ''){
-          const1[i] = parseInt(list[i].innerHTML);
-        }
-      }
-      const2[list.length - 1] = "";
-
-      won = (const1.toString() == const2.toString())?true:false;
+      won = (count == n*n - 1)?true:false;
       if(won){
         var para = $("<p></p>").text("You won!"); 
         $("body").append(para); 
@@ -73,7 +68,8 @@ $(document).ready(function(){
   }
   a = shuffle(a);
 
-  const tabela = document.createElement('table');
+  tableBody = $("table tbody");
+
     for(i = 0; i < n ; i++){
       const tr = tabela.insertRow();
       for(j = 0; j < n ; j++){
