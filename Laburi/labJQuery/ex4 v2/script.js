@@ -34,7 +34,6 @@ $(document).ready(function(){
             }); 
         })
         
-        console.log(id,clicked[criteria]);
         if(clicked[criteria] == 0){
             let sorted = false;
             while (!sorted) {
