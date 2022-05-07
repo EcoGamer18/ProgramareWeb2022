@@ -17,30 +17,52 @@ $(document).ready(function(){
     
     if(!won){
         e = e || window.event;
-      var list = $("td");
+      var list = $("table").find("td");
       var pozx = 0, pozy = 0;
       for(var i = 0; i < list.length; i ++){
-        if(list[i].innerHTML == 0 || list[i].innerHTML == ''){
+        if($(list[i]).text() == ""){
           pozx = i%n;
           pozy = Math.floor(i/n);
+          break;
         }
       }
+
+      var first;
+      var second;
     
+      //console.log(pozx,pozy);  
+
       if (e.keyCode == '38' && pozy > 0) {
           // up
-          [list[pozy*n+pozx].innerHTML, list[(pozy-1)*n+pozx].innerHTML] = [list[(pozy-1)*n+pozx].innerHTML, list[pozy*n+pozx].innerHTML];
+          first = $("#e"+((pozy-1)*n+pozx));
+          second = $("#e"+(pozy*n+pozx));
+          var aux = first.html();
+          first.html(second.html());
+          second.html(aux);
       }
       else if (e.keyCode == '40' && pozy < n-1) {
           // down
-          [list[pozy*n+pozx].innerHTML, list[(pozy+1)*n+pozx].innerHTML] = [list[(pozy+1)*n+pozx].innerHTML, list[pozy*n+pozx].innerHTML];
+          first = $("#e"+((pozy+1)*n+pozx));
+          second = $("#e"+(pozy*n+pozx));
+          var aux = first.html();
+          first.html(second.html());
+          second.html(aux);
       }
       else if (e.keyCode == '37' && pozx > 0) {
           // left
-          [list[pozy*n+pozx].innerHTML, list[pozy*n+(pozx-1)].innerHTML] = [list[pozy*n+(pozx-1)].innerHTML, list[pozy*n+pozx].innerHTML];
+          first = $("#e"+(pozy*n+pozx-1));
+          second = $("#e"+(pozy*n+pozx));
+          var aux = first.html();
+          first.html(second.html());
+          second.html(aux);
       }
       else if (e.keyCode == '39' && pozx < n-1) {
           // right
-          [list[pozy*n+pozx].innerHTML, list[pozy*n+pozx+1].innerHTML] = [list[pozy*n+pozx+1].innerHTML, list[pozy*n+pozx].innerHTML];
+          first = $("#e"+(pozy*n+pozx+1));
+          second = $("#e"+(pozy*n+pozx));
+          var aux = first.html();
+          first.html(second.html());
+          second.html(aux);
       }
 
       var count = 0;
@@ -68,25 +90,27 @@ $(document).ready(function(){
   }
   a = shuffle(a);
 
-  tableBody = $("table tbody");
+  var content = "<table>";
 
     for(i = 0; i < n ; i++){
-      const tr = tabela.insertRow();
+      content += "<tr>";
       for(j = 0; j < n ; j++){
-        const td = tr.insertCell();
+        content += "<td id=e"+(i*n+j)+">";
         switch (a[i*n+j]){
           case 0:
-            td.appendChild(document.createTextNode(""));
+            content +="";
             break;
           default:
-            td.appendChild(document.createTextNode(a[i*n+j]));
+            content += a[i*n+j];
         }
+        content += "</td>";
       }
+      content += "</tr>";
     }
 
-    const body = document.body;
-    body.appendChild(tabela);
-  
+    content += "</table>";
+
+    $("body").append(content); 
   
     $(document).keydown(function(e){game(e)});
 
