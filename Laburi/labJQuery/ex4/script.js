@@ -38,7 +38,7 @@ $(document).ready(function(){
     const updateArrowDown = (text, currentHeader) => {
         $("#tableData tr th").each(function() {
             if ($(this).text() == currentHeader) {
-                currentHeader.html(text + " ▼");
+                $(this).html(text + " ▼");
             } else {
                 $(this).text().replace(" ▼", "");
             }
@@ -47,8 +47,8 @@ $(document).ready(function(){
 
     const updateArrowUp = (text, currentHeader) => {
         $("#tableData tr th").each(function(){
-            if ($(this) == currentHeader) {
-                currentHeader.html( text + " ▲");
+            if ($(this).text() == currentHeader) {
+                $(this).html( text + " ▲");
             } else {
                 $(this).text().replace(" ▲", "");
             }
