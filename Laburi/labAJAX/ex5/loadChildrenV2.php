@@ -12,19 +12,7 @@ while ($row = mysqli_fetch_array($result)) {
     $sub_data["idParinte"] = $row["idParinte"];
     $data[] = $sub_data;
 }
-foreach ($data as $key => &$value) {
-    $output[$value["id"]] = &$value;
-}
-foreach ($data as $key => &$value) {
-    if ($value["idParinte"] && isset($output[$value["idParinte"]])) {
-        $output[$value["idParinte"]]["nodes"][] = &$value;
-    }
-}
-foreach ($data as $key => &$value) {
-    if ($value["idParinte"] && isset($output[$value["idParinte"]])) {
-        unset($data[$key]);
-    }
-}
+
 echo json_encode($data);
 
 mysqli_close($conn);

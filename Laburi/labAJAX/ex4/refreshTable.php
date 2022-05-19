@@ -1,9 +1,5 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "mysql";
-
+    include_once('../config.php');
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
@@ -16,5 +12,3 @@
         $sql -> bind_param('i',$i);
         $sql -> execute();
     }
-    
-?>
