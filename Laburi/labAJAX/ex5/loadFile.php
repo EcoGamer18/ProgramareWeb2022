@@ -15,5 +15,9 @@ while ($row = mysqli_fetch_array($result)) {
 
 if (isset($data))
     echo json_encode($data);
+else {
+    $response = "";
+    echo json_encode(json_decode("{}"));
+}
 
 mysqli_close($conn);

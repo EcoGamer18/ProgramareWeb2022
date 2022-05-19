@@ -12,7 +12,9 @@ $(document).ready(function () {
   function populateUL($ul, data) {
     // Register the given UL element as the root in a new data structure
     var hash = {
-      0: { $ul: $ul },
+      0: {
+        $ul: $ul,
+      },
     };
     // Key the objects by their id, and create individual LI elements for them,
     // and an empty UL container for their potential child elements
@@ -24,7 +26,6 @@ $(document).ready(function () {
           .text(o.nume)
           .append($ul)
           .click(function (e) {
-            console.log(e);
             if (e.target == e.currentTarget) {
               $.ajax({
                 url: "http://localhost/temaAJAX/ex5/loadFile.php?id=" + o.id,
@@ -32,7 +33,6 @@ $(document).ready(function () {
                 contentType: "application/json",
                 dataType: "json",
                 success: function (data) {
-                  console.log("fisiere: ", o.id, data);
                   populateULFile(data);
                 },
               });
@@ -51,15 +51,17 @@ $(document).ready(function () {
     // and an empty UL container for their potential child elements
     $("#fisiere").empty();
 
-    data.forEach(function (o) {
-      $("#fisiere").append(
-        $("<li>")
-          .text(o.nume)
-          .click(function (e) {
-            $("#titluFisier").text(o.nume);
-            $("#continutFisier").text(o.continut);
-          })
-      );
-    });
+    console.log(data);
+    if (data.length > 0)
+      data.forEach(function (o) {
+        $("#fisiere").append(
+          $("<li>")
+            .text(o.nume)
+            .click(function (e) {
+              $("#titluFisier").text(o.nume);
+              $("#continutFisier").text(o.continut);
+            })
+        );
+      });
   }
 });
