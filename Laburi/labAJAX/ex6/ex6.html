@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Cerinta 6</title>
 </head>
+
 <body>
-    
+    <!--  producator, procesor, memorie, capacitate HDD, placa video, etc. -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group">
+                    <h3>Producator</h3>
+                    <div style="height: 180px; overflow-y: auto; overflow-x: hidden;" id="producator" onload="loadProducator()">
+                    </div>
+                </div>
+                <div class="list-group">
+                    <h3>Procesor</h3>
+                    <div style="height: 180px; overflow-y: auto; overflow-x: hidden;" id="procesor" onload="loadProcesor()">
+                    </div>
+                </div>
+                <div class="list-group">
+                    <h3>Memorie</h3>
+                    <div style="height: 180px; overflow-y: auto; overflow-x: hidden;" id="memorie" onload="loadMemorie()">
+                    </div>
+                </div>
+                <div class="list-group">
+                    <h3>Capacitate HDD</h3>
+                    <div style="height: 180px; overflow-y: auto; overflow-x: hidden;" id="capacitate" onload="loadCapacitate()">
+                    </div>
+                </div>
+                <div class="list-group">
+                    <h3>Placa video</h3>
+                    <div style="height: 180px; overflow-y: auto; overflow-x: hidden;" id="placa" onload="loadPlaca()">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <br />
+            <div class="row filter_data">
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
 </body>
+
 </html>
