@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  loadProducator();
+  loadCapacitate();
+  loadMemorie();
+  loadProcesor();
+  loadPlaca();
   function loadProducator() {
     xhttp = new XMLHttpRequest();
     const xmlhttp = new XMLHttpRequest();

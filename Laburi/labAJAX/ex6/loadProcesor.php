@@ -9,10 +9,8 @@ $statement = $conn->prepare($query);
 $statement->execute();
 $statement->bind_result($procesor);
 
-echo "<div class=\"list-group-item checkbox\">";
-echo "<label>Procesoare</label>";
+echo "<form class=\"list-group-item checkbox\">";
 while ($statement->fetch()) {
-    echo "<input type=\"checkbox\" class=\"common_selector procesor\" value=\"" . $procesor . ">";
+    echo "<input type=\"checkbox\" class=\"common_selector producator\" value=\"" . $procesor . ">" . $procesor . "<br>";
 }
-
-echo "</div>";
+echo "</form>";
