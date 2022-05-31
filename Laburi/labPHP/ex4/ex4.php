@@ -10,6 +10,7 @@
 
 <body>
     <!-- https://github.com/radosnystudent/PHP-login-register-system -->
+    <!-- https://www.tutorialspoint.com/php/php_sending_emails.htm -->
 </body>
 
 </html>
