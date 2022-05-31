@@ -14,7 +14,7 @@ class Travel
 
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servernameS, $usernameS, $passwordS, $dbnameS);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
